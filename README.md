@@ -1,3 +1,5 @@
+![ThinkTwiceBanner](https://imgur.com/9N1qo8j)
+
 # Think Twice 2020
 
 ## Team name
