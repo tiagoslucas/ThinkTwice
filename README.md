@@ -1,4 +1,4 @@
-![ThinkTwiceBanner](https://imgur.com/9N1qo8j)
+![ThinkTwiceBanner](https://imgur.com/m5m76cM.png)
 
 # Think Twice 2020
 
