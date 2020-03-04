@@ -1,16 +1,5 @@
-# Challenge 1 - Title
+# Challenge 1 - Power of Cryptography
 
-## Description  
-
-## Solution
-
-## Authors
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
 
 
 **March, 2020 - Think Twice 2020**
