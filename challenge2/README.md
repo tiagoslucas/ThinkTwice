@@ -1,16 +1,3 @@
-# Challenge 2 - Title
-
-## Description  
-
-## Solution
-
-## Authors  
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
-
+# Challenge 2 - Citações LaTeX 
 
 **March, 2020 - Think Twice 2020**
