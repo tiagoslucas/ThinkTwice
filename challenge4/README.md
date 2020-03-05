@@ -1,16 +1,3 @@
-# Challenge 4 - Title
-
-## Description  
-
-## Solution
-
-## Authors  
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
-
+# Challenge 4 - Problema dos Primos
 
 **March, 2020 - Think Twice 2020**
