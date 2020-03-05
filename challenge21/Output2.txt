@@ -1,0 +1,200 @@
+aberto={discussão=1}
+acalorada={sobre=1}
+acordo={com=1}
+adianta={que=1}
+afirma={silkie=1}
+agentes={aproximam=1, aviso=1}
+agora={estava=1}
+alertam={que=1}
+algumas={críticas=1}
+alguém={que=1}
+ameaça={liberdades=1}
+aos={agentes=1}
+apesar={algumas=1}
+aproximam={pedem=1}
+aquela={pessoa=1}
+argumenta={que=1}
+armas={facas=1}
+assistente={nick=1}
+ataques={armas=1}
+até={agora=1}
+auxílio={seu=1}
+avança={nas=1}
+aviso={sugerindo=1}
+bbc={news=1}
+big={brother=1}
+britânica={que=1}
+brother={watch=1}
+cada={câmara=1}
+capital={britânica=1}
+carlo={diretora=1}
+cidadãos={grupos=1}
+civis={reino=1}
+colocadas={locais=1}
+com={bbc=1, privacidade=1}
+começar={ser=1}
+comissário={assistente=1}
+como={ataques=1, big=1, espetáculos=1, shopping=1}
+comunicado={imprensa=1, que=1}
+conclui={comissário=1}
+confirma={polícia=1}
+consensual={tem=1}
+considera={que=1}
+constar={lista=1}
+contidos={listas=1}
+crianças={uso=1}
+crimes={graves=2}
+críticas={grupos=1, polícia=1}
+câmara={irá=1, sinaliza=1}
+câmaras={para=1, reconhecimento=1, serão=1}
+cívicos={como=1, que=1}
+dados={indicam=1}
+daquela={organização=1}
+decisão={representa=1}
+democráticas={sairão=1}
+depois={dos=1}
+descrevem={responsáveis=1}
+detido={este=1}
+dever={usar=1}
+direito={privacidade=1}
+diretora={daquela=1}
+discussão={acalorada=1}
+diário={acordo=1}
+documento={pml=1}
+dos={cidadãos=1, períodos=1}
+end={cada=1}
+enorme={expansão=1}
+ephgrave={comunicado=1}
+espetáculos={jogos=1}
+esta={decisão=1}
+estado={poder=1, vigilância=1}
+estar={localizadas=1}
+estava={limitado=1}
+este={constar=1, sistema=1}
+está={longe=1, pronta=1, ser=1}
+eventos={públicos=1}
+expansão={estado=1}
+explica={polícia=1, que=2}
+exploração={sexual=1}
+facas={exploração=1}
+facial={avança=1, oferece=1, pela=1, vão=1}
+fase={testes=1}
+futebol={temos=1}
+graves={violentos=2}
+grupos={cívicos=2}
+identificar={pessoas=1}
+identificação={este=1}
+implantada={locais=1}
+implementadas={londres=1}
+implementado={apesar=1}
+imprensa={pml=1}
+indicam={que=1}
+indiferente={críticas=1}
+indivíduo={agentes=1}
+indivíduos={procurados=1}
+integrada={policiamento=1}
+irá={procurar=1}
+jogos={futebol=1}
+julgamentos={eventos=1}
+liberdades={civis=1, democráticas=1}
+limitado={pequenos=1}
+lista={suspeitos=1}
+listas={suspeitos=1}
+locais={onde=1, populares=1}
+localizadas={pessoas=1}
+londres={conclui=1, confirma=1, depois=1, pml=1}
+longe={ser=1}
+manter={pessoas=1}
+mas={até=1}
+medida={está=1}
+meio={auxílio=1}
+mesmo={documento=1, ser=1}
+metropolitana={capital=1, londres=1}
+monitorar={qualquer=1}
+mostram={preocupados=1}
+nas={ruas=2}
+news={medida=1}
+nick={ephgrave=1}
+nomeadamente={indivíduos=1}
+novas={tecnologias=1}
+num={comunicado=2}
+nós={indiferente=1}
+oferece={estado=1}
+onde={dados=1}
+organização={num=1}
+para={identificar=1, manter=1, rastrear=1, ser=1}
+passou={fase=1}
+pedem={sua=1}
+pela={polícia=1}
+pequenos={julgamentos=1}
+permanentemente={integrada=1}
+períodos={teste=1}
+pessoa={pode=1}
+pessoas={nas=1, responsáveis=1, seguras=1}
+pml={adianta=1, explica=1, sublinha=1}
+pode={ser=1}
+poder={sem=1}
+policiais={mesmo=1}
+policiamento={diário=1}
+polícia={argumenta=1, metropolitana=2, num=1, usado=1}
+populares={como=1}
+por={crimes=2}
+possam={estar=1}
+precedentes={para=1}
+prejudicadas={esta=1}
+preocupados={com=1}
+privacidade={dos=1, polícia=1}
+procurado={descrevem=1}
+procurados={por=1}
+procurar={rostos=1}
+pronta={para=1}
+públicos={como=1}
+qualquer={nós=1}
+quando={uma=1}
+que={aquela=1, considera=1, câmaras=1, está=1, explica=1, liberdades=1, meio=1, mostram=1, possam=1, quando=1, simplesmente=1, tecnologia=3}
+rastrear={monitorar=1}
+reconhecimento={facial=4}
+reino={unido=2}
+representa={uma=1}
+responsáveis={policiais=1, por=1}
+rostos={contidos=1}
+ruas={londres=1, vai=1}
+sairão={prejudicadas=1}
+seguras={londres=1}
+sem={precedentes=1}
+ser={alguém=1, consensual=1, implementadas=1, implementado=1, permanentemente=1, procurado=1}
+será={detido=1, implantada=1}
+serão={colocadas=1}
+seu={trabalho=1}
+sexual={crianças=1}
+shopping={westfield=1}
+silkie={carlo=1}
+simplesmente={aos=1}
+sinaliza={indivíduo=1}
+sistema={câmaras=1, que=1}
+sobre={direito=1}
+stratford={west=1}
+sua={identificação=1}
+sublinha={que=1}
+sugerindo={que=1}
+suspeitos={nomeadamente=1, será=1}
+séria={ameaça=1}
+tecnologia={passou=1, reconhecimento=1, será=1}
+tecnologias={para=1}
+tem={aberto=1}
+temos={dever=1}
+teste={sistema=1}
+testes={está=1}
+trabalho={câmaras=1}
+uma={câmara=1, enorme=1, séria=1}
+unido={afirma=1, mas=1}
+usado={reino=1}
+usar={novas=1}
+uso={reconhecimento=1}
+vai={mesmo=1}
+vigilância={uma=1}
+violentos={como=1, explica=1}
+vão={começar=1}
+watch={alertam=1}
+west={end=1}
+westfield={stratford=1}
