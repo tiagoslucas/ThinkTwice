@@ -1,0 +1,23 @@
+1|Vamos
+1|Vai, inalar
+1|Vamos,inalar,um
+0|o
+1|um,atado
+-1|iniciar,um
+1|ataque
+1|como
+0|conto
+0|com
+1|amas
+1|armas,química
+0|químicas
+1|hoje.
+1|A
+1|embrolhada
+0|emboscada
+2|se,há
+1|feita
+-1|será,feita
+1|porque
+1|norte.
+0|por,norte
