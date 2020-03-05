@@ -1,16 +1,3 @@
-# Challenge 3 - Title
-
-## Description  
-
-## Solution
-
-## Authors  
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
-
+# Challenge 3 - Troca de comboios
 
 **March, 2020 - Think Twice 2020**
