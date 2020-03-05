@@ -1,16 +1,4 @@
-# Challenge 1 - Title
-
-## Description  
-
-## Solution
-
-## Authors
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
+# Challenge 27 - Trabalho invertido
 
 
 **March, 2020 - Think Twice 2020**
