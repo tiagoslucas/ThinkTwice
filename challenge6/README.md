@@ -1,16 +1,4 @@
-# Challenge 1 - Title
-
-## Description  
-
-## Solution
-
-## Authors
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
+# Challenge 6 - O problema da caixa de correio 
 
 
 **March, 2020 - Think Twice 2020**
