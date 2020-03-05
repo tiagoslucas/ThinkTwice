@@ -1,16 +1,3 @@
-# Challenge 1 - Title
-
-## Description  
-
-## Solution
-
-## Authors
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
-
+# Challenge 40 - Fação Inimiga
 
 **March, 2020 - Think Twice 2020**
