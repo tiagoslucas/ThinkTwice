@@ -1,16 +1,3 @@
-# Challenge 1 - Title
-
-## Description  
-
-## Solution
-
-## Authors
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
-
+# Challenge 39 - Equação Quimica
 
 **March, 2020 - Think Twice 2020**
