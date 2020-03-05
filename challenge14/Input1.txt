@@ -1,0 +1,11 @@
+red green blue
+WesternAustralia NorthernTerritory
+WesternAustralia SouthAustralia
+SouthAustralia NorthernTerritory
+Queensland NorthernTerritory
+Queensland SouthAustralia
+Queensland NewSouthWales
+NewSouthWales SouthAustralia
+Victoria SouthAustralia
+Victoria NewSouthWales
+Victoria Tasmania
