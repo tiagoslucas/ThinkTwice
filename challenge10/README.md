@@ -1,16 +1,3 @@
-# Challenge 1 - Title
-
-## Description  
-
-## Solution
-
-## Authors
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
-
+# Challenge 10 - Triângulos
 
 **March, 2020 - Think Twice 2020**
