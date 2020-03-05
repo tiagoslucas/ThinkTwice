@@ -1,0 +1,23 @@
+1|Além
+1|avançar, se
+1|Se,nã,avançar
+1|consegues,alterar,ok
+-1|ler
+2|ler,outra,vez
+-1|corretamente
+1|anterior,mensagem
+0|corretamente,a
+1|erro,amanhã
+0|esta,telefonema
+0|mensagem
+2|podes,não
+1|significa,que,nada
+1|estás,longe
+0|nã
+0|não
+0|no
+3|mau,péssimo
+-1|bom,fim
+0|estrada
+0|fora
+0|caminho
