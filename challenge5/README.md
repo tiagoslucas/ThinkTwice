@@ -1,16 +1,3 @@
-# Challenge 5 - Title
-
-## Description  
-
-## Solution
-
-## Authors  
-
-### Team Name  
-
-* **Team member name**
-* **Team member name**
-* **Team member name**
-
+# Challenge 5 - Organização de Postes
 
 **March, 2020 - Think Twice 2020**
