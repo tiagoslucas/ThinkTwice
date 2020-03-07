@@ -37,7 +37,6 @@ def isMultiple(value, mult):
     for i in value:
         binary += str(i)
     if int(binary, 2) % mult == 0 and int(binary, 2) >= 2**(length-1):
-        print(binary, int(binary, 2), mult, int(binary, 2) / mult)
         return True
     return False
 
