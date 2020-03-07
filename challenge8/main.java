@@ -121,7 +121,7 @@ class main {
         // Current points are same as initial points
         Cell cell = new Cell(sx, sy);
 
-        a[cell.y * N + cell.x] = 1; // Mark first move.
+        a[cell.y * N + cell.x] = 0; // Mark first move.
 
         // Keep picking next points using
         // Warnsdorff's heuristic
