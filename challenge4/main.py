@@ -1,3 +1,4 @@
+import sys
 import math
 
 
@@ -8,7 +9,7 @@ def isPrime(number):
     return True
 
 
-with open('input2.txt') as f:
+with open(sys.argv[1], "r") as f:
     lines = [line.rstrip() for line in f]
     n, c = lines[0].split(" ")
 
