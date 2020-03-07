@@ -9,6 +9,21 @@ with open(sys.argv[1], 'r', encoding='utf8') as fp:
     while line:
         process_line = re.split(' |-',line[:-1])
         for word in process_line:
+            wordsa = re.sub(',', ' ', word)
+            wordsa = wordsa.split(" ")
+            if (len(wordsa)>1):
+                word = wordsa[0]
+                process_line.append(wordsa[1])
+            else:
+                word = wordsa[0]
+            
+            wordsa2 = word.split("’")
+            if (len(wordsa2)>1):
+                word = wordsa2[0]
+                process_line.append(wordsa2[1])
+            else:
+                word = wordsa2[0]
+
             word = re.sub(r'[^\w\s]', '', word)
             word_act = word.lower()
             if word_ant == "":
@@ -23,7 +38,7 @@ with open(sys.argv[1], 'r', encoding='utf8') as fp:
                 word_ant = word_act
         line = fp.readline()
 
-f = open('team15_ttwins/challenge21/result.txt', 'w', encoding='utf8')
+f = open('result.txt', 'w', encoding='utf8')
 new_dic = {}
 for key in sorted(dic.keys()) :
     new_dic[key] = dic[key]

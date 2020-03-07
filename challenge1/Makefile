@@ -11,8 +11,8 @@ CFLAGS=-Wall -lm -std=c11
 
 OBJ=$(SRC:.c=.o)  #macro automática para gerar os OBJ a partir das SRC
 
-INCLUDE=    #para as header files (cabeçalhos)
-LIB= -lm       #bibliotecas específicas a usar
+INCLUDE=	    #para as header files (cabeçalhos)
+LIB=-lm 		#bibliotecas específicas a usar
 
 ############################################
 # Regras
