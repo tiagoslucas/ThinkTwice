@@ -111,11 +111,10 @@ with open(sys.argv[1], 'r', encoding='utf8') as f:
             Action = stringsum.format(crScaler, val2, val1, 
                                     crScaler, val2, val1)
 
-f = open('team15_ttwins/challenge31/result.txt', 'w')
-if int(BM[0][0]) == 0 or int(BM[1][0]) == 0:
-    f.write(str("don't know")+'\n')
-    f.write(str("don't know"))
-else:
-    f.write(str(int(BM[0][0]))+'\n')
-    f.write(str(int(BM[1][0])))
-f.close()
+with open('team15_ttwins/challenge31/result.txt', 'w') as f:
+    if int(BM[0][0]) == 0 or int(BM[1][0]) == 0:
+        f.write(str("don't know")+'\n')
+        f.write(str("don't know"))
+    else:
+        f.write(str(int(BM[0][0]))+'\n')
+        f.write(str(int(BM[1][0])))
