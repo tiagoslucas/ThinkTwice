@@ -1,5 +1,3 @@
-from itertools import permutations, chain
-
 with open('input1.txt') as f:
     lines = [line.rstrip() for line in f]
     n, l, r = lines[0].split(" ")
