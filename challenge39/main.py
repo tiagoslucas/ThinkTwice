@@ -33,8 +33,8 @@ def create_combinations(firstList, secondList):
 		if i not in dictFromList(secondList).keys():
 			return 1
 
-	for comb in combinations(range(1,20), len(firstList) + len(secondList)):
-		for perm in product(comb):
+	for comb in combinations(range(1,10), len(firstList) + len(secondList)):
+		for perm in permutations(comb):
 			fList = []
 			sList = []
 			for i in range(len(perm)):

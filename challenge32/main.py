@@ -39,5 +39,5 @@ for replacement in replacements(key):
     if total == f(list2[-1]):
         count += 1
 
-with open('team15_ttwins/challenge32/result.txt', 'w') as f:
-    f.write(str(count))
+with open('team15_ttwins/challenge32/result.txt', 'w') as file:
+    file.write(str(count))
