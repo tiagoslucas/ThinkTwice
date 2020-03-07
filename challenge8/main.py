@@ -14,32 +14,30 @@ def main(filename):
         for i in file:
             initial = i
 
-    for k in range(64):
-        cb[ky][kx] = k + 1
-        pq = []
-        for i in range(8):
-            nx = kx + dx[i]; ny = ky + dy[i]
-            if nx >= 0 and nx < 8 and ny >= 0 and ny < 8:
-                if cb[ny][nx] == 0:
-                    ctr = 0
-                    for j in range(8):
-                        ex = nx + dx[j]; ey = ny + dy[j]
-                        if ex >= 0 and ex < 8 and ey >= 0 and ey < 8:
-                            if cb[ey][ex] == 0: ctr += 1
-                    heappush(pq, (ctr, i))
-        if len(pq) > 0:
-            (p, m) = heappop(pq)
-            kx += dx[m]; ky += dy[m]
-        else:
-            break
-
-    for cy in range(8):
-        for cx in range(8):
-            print(string.rjust(str(cb[cy][cx]), 2))
-        print()
-
     with open('result.txt', 'w') as file:
-        file.write(final)
+        for k in range(64):
+            cb[ky][kx] = k + 1
+            pq = []
+            for i in range(8):
+                nx = kx + dx[i]; ny = ky + dy[i]
+                if nx >= 0 and nx < 8 and ny >= 0 and ny < 8:
+                    if cb[ny][nx] == 0:
+                        ctr = 0
+                        for j in range(8):
+                            ex = nx + dx[j]; ey = ny + dy[j]
+                            if ex >= 0 and ex < 8 and ey >= 0 and ey < 8:
+                                if cb[ey][ex] == 0: ctr += 1
+                        heappush(pq, (ctr, i))
+            if len(pq) > 0:
+                (p, m) = heappop(pq)
+                kx += dx[m]; ky += dy[m]
+            else:
+                break
+
+        for cy in range(8):
+            for cx in range(8):
+                file.write(str(cb[cy][cx]) + '\n', 2)
+            file.write('\n')
 
 if __name__ == '__main__' and len(sys.argv) > 1:
     main(sys.argv[1])
