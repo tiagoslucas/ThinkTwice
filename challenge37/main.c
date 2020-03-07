@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
 	fclose(input);
 
 	
-
+	
 	output = fopen("result.txt", "w");
 	if (result == 0) {
 		for (int i = 0; i < n; i++) {

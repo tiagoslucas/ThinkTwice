@@ -15,8 +15,7 @@ def replacements(key):
                 if no0:
                     yield temp
 
-
-with open(sys.argv[1], 'r', encoding='utf8') as f:
+with open(sys.argv[1], 'r') as f:
     numberOfWords = int(f.readline())
     list2 = []
     for i in range(numberOfWords):
