@@ -13,7 +13,7 @@ int main(int argc, char** argv) {
 	fclose(input);
 
 	output = fopen("result.txt", "w");
-	fprintf(output, "%d", (int) pow((double)valor, 1/ (double)ordem));
+	fprintf(output, "%d", (int) pow((double)valor, 1 / (double)ordem));
 	fclose(output);
 
 	return 0;

@@ -1,4 +1,6 @@
-from itertools import combinations, permutations, product
+from itertools import combinations_with_replacement, permutations
+from functools import reduce
+from math import gcd
 import sys
 import re
 
@@ -33,8 +35,8 @@ def create_combinations(firstList, secondList):
 		if i not in dictFromList(secondList).keys():
 			return 1
 
-	for comb in combinations(range(1,20), len(firstList) + len(secondList)):
-		for perm in product(comb):
+	for comb in combinations_with_replacement(range(1,10), len(firstList) + len(secondList)):
+		for perm in permutations(comb):
 			fList = []
 			sList = []
 			for i in range(len(perm)):
@@ -44,13 +46,12 @@ def create_combinations(firstList, secondList):
 				else:
 					for x in range(int(perm[i])):
 						sList.extend([secondList[i - len(firstList)]])
-			print(dictFromList(fList))
 			for j in dictFromList(fList).keys():
 				if dictFromList(fList)[j] != dictFromList(sList)[j]:
 					break
 			else:
-				result = perm
-				print(result)
+				for i in perm:
+					result.append(i)
 				firstList = fList
 				secondList = sList
 				return 0
@@ -66,5 +67,14 @@ if create_combinations(list1, list2) == 1:
 	with open('team15_ttwins/challenge39/result.txt', 'w') as output:
 		output.write('IMPOSSIBLE')
 else:
+	div = 1
+	if result:
+		print(result)
+		div = reduce(gcd, result)
+	for i in range(len(result)):
+		if i < len(list1):
+			list1[i] = f"{int(result[i]/div)}{list2[i]}"
+		else:
+			list2[i - len(list1)] = f"{int(result[i]/div)}{list2[i - len(list1)]}"
 	with open('team15_ttwins/challenge39/result.txt', 'w') as output:
 		output.write('+'.join(list1) + '=' + '+'.join(list2))

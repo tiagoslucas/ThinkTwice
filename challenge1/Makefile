@@ -7,7 +7,7 @@ PROG=main
 ################################
 
 CC=gcc
-CFLAGS=-Wall
+CFLAGS=-Wall -lm -std=c11
 
 OBJ=$(SRC:.c=.o)  #macro automática para gerar os OBJ a partir das SRC
 

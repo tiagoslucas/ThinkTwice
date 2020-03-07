@@ -2,7 +2,6 @@ from itertools import combinations, permutations
 import sys
 list1 = []
 
-
 def replacements(key):
     for comb in combinations(range(10), len(key)):
         for perm in permutations(comb):
@@ -38,8 +37,7 @@ for replacement in replacements(key):
     for i in range(numberOfWords - 1):
         total += f(list2[i])
     if total == f(list2[-1]):
-        #        print('{} + {} = {}'.format(f(list2[0]), f(list2[1]), f(list2[2])))
         count += 1
 
-with open('team15_ttwins/challenge32/result.txt', 'w') as f:
-    f.write(str(count))
+with open('team15_ttwins/challenge32/result.txt', 'w') as file:
+    file.write(str(count))
