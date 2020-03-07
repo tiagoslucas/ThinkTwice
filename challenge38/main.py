@@ -50,7 +50,7 @@ def printFibRepresntation(n, seq):
 
 # Esta a usar a n-sequencia
 if n in seq[2:]:
-    f = open("team15_ttwins/challenge38/result.txt", "w")
+    f = open("result.txt", "w")
     f.write("lose")
     f.close()
 else:
@@ -74,6 +74,6 @@ else:
                     var = i
                     break
 
-    f = open("team15_ttwins/challenge38/result.txt", "w")
+    f = open("result.txt", "w")
     f.write(str(var))
     f.close()
