@@ -75,9 +75,6 @@ else:
 			list1[i] = f"{int(result[i]/div)}{list2[i]}"
 		else:
 			list2[i - len(list1)] = f"{int(result[i]/div)}{list2[i - len(list1)]}"
-	with open('result.txt', 'w') as output:
+	with open('team15_ttwins/challenge39/result.txt', 'w') as output:
 		#output.write('+'.join(list1) + '=' + '+'.join(list2))
-		out = ''
-		for i in result:
-			out += f"{int(i/div)} "
-		output.write(out.strip())
+		output.writelines(f"{int(i/div)} " for i in result)
