@@ -3,12 +3,14 @@ f = open(sys.argv[1], "r")
 text = f.read()
 output = ""
 
+count = 0
 for i in range(0, len(text)):
     if text[i] == "\"":
-        if i % 2 == 0:
+        if count % 2 == 0:
             output += "``"
         else:
             output += "''"
+        count += 1
     else:
         if text[i:].find("\"") == -1:
             output += text[i:]
