@@ -1,7 +1,8 @@
 from collections import Counter
 import math
 
-with open('input2.txt') as f:
+import sys
+with open(sys.argv[1], "r") as f:
     lines = [line.rstrip() for line in f]
     numbers = [(int)(i) for i in lines[0].split(" ")]
 

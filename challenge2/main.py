@@ -1,6 +1,8 @@
-f = open("input2.txt", "r")
+import sys
+f = open(sys.argv[1], "r")
 text = f.read()
 output = ""
+
 for i in range(0, len(text)):
     if text[i] == "\"":
         if i % 2 == 0:

@@ -1,4 +1,5 @@
-with open('input2.txt') as f:
+import sys
+with open(sys.argv[1], "r") as f:
     lines = [line.rstrip() for line in f]
 swaps = 0
 lines[1] = [value for value in lines[1].split(" ")]
