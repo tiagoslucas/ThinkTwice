@@ -14,7 +14,7 @@ int main(int argc, char** argv) {
 	}
 	fclose(input);
 
-	result = (k + 1);
+	result = (k * 2);
 	result = (m + k) / result;
 	result = m * result;
 
