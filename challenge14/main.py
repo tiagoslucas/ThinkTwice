@@ -25,7 +25,22 @@ for l in colors:
             colors[l] = i
             break
 
-f = open("team15_ttwins/challenge14/result.txt", "w")
+isValid = True
 for color in colors:
-    f.write(color + " " + init_colors[colors[color]] + "\n")
-f.close()
+    if colors[color] == -1:
+        isValid = False
+        break
+    else:
+        for c in dic[l]:
+            if colors[c] == colors[color]:
+                isValid = False
+                break
+
+if isValid:
+    f = open("result.txt", "w")
+    for color in colors:
+        f.write(color + " " + init_colors[colors[color]] + "\n")
+    f.close()
+else:
+    f = open("result.txt", "w")
+    f.close()
