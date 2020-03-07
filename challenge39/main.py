@@ -10,9 +10,6 @@ list1 = []
 list2 = []
 result = []
 
-def lcm(a, b):
-    return abs(a*b) // math.gcd(a, b)
-
 def dictFromList(listName):
 	dictName = {}
 	for i in listName:
