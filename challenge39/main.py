@@ -69,7 +69,6 @@ if create_combinations(list1, list2) == 1:
 else:
 	div = 1
 	if result:
-		print(result)
 		div = reduce(gcd, result)
 	for i in range(len(result)):
 		if i < len(list1):
@@ -78,4 +77,4 @@ else:
 			list2[i - len(list1)] = f"{int(result[i]/div)}{list2[i - len(list1)]}"
 	with open('team15_ttwins/challenge39/result.txt', 'w') as output:
 		#output.write('+'.join(list1) + '=' + '+'.join(list2))
-		output.write(' '.join(result))
+		output.writelines(f"{int(res/div)} " for res in result)
