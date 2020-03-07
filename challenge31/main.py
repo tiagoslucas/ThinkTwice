@@ -1,5 +1,5 @@
 import sys
-        
+
 def zeros_matrix(rows, cols):
     A = []
     for i in range(rows):
