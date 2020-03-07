@@ -47,6 +47,6 @@ for i in permutation(out):
     if visible(i, "l") == l and visible(i, r) == r:
         total += 1
 
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge5/result.txt", "w")
 f.write(str(total))
 f.close()

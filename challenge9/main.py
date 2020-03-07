@@ -48,6 +48,6 @@ for permutation in permutations:
     if isMultiple(permutation, mult):
         count += 1
 
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge9/result.txt", "w")
 f.write(str(count))
 f.close()

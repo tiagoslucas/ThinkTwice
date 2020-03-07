@@ -16,6 +16,6 @@ for i in range(0, len(text)):
         else:
             output += text[i]
 
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge2/result.txt", "w")
 f.write(output)
 f.close()

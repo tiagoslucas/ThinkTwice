@@ -31,6 +31,6 @@ for c in sorted(counter):
         else:
             count += counter[c]
 
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge7/result.txt", "w")
 f.write(str(med))
 f.close()

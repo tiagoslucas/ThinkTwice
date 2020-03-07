@@ -24,6 +24,6 @@ with open(sys.argv[1], 'r', encoding='utf8') as f:
     i = first
     string = ""
 
-    f = open("result.txt", "w", encoding="utf8")
+    f = open("team15_ttwins/challenge40/result.txt", "w", encoding="utf8")
     f.write(" ".join(act).replace("\n", ""))
     f.close()

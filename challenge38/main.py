@@ -74,6 +74,6 @@ else:
                     var = i
                     break
 
-    f = open("team15/challenge38/result.txt", "w")
+    f = open("team15_ttwins/challenge38/result.txt", "w")
     f.write(str(var))
     f.close()

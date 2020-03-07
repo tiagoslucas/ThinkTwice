@@ -23,7 +23,7 @@ with open(sys.argv[1], 'r', encoding='utf8') as fp:
                 word_ant = word_act
         line = fp.readline()
 
-f = open('result.txt', 'w', encoding='utf8')
+f = open('team15_ttwins/challenge21/result.txt', 'w', encoding='utf8')
 new_dic = {}
 for key in sorted(dic.keys()) :
     new_dic[key] = dic[key]

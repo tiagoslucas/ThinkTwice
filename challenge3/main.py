@@ -11,6 +11,6 @@ for i in range(0, len(lines[1])):
             lines[1][j] = temp
             swaps += 1
 
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge3/result.txt", "w")
 f.write("Optimal train swapping takes " + str(swaps) + " swaps.")
 f.close()

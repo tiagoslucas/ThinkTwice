@@ -41,6 +41,6 @@ for replacement in replacements(key):
         #        print('{} + {} = {}'.format(f(list2[0]), f(list2[1]), f(list2[2])))
         count += 1
 
-f = open('result.txt', 'w')
+f = open('team15_ttwins/challenge32/result.txt', 'w')
 f.write(str(count))
 f.close()

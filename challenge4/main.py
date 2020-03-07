@@ -34,7 +34,7 @@ if len(out) > 2 * c:
             result.append(out[math.floor(len(out) / 2) + (i + 1)])
 else:
     result = out
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge4/result.txt", "w")
 f.write(str(n) + " " + str(c) + ": " +
         str(sorted(result))[1:-1].replace(",", ""))
 f.close()

@@ -61,6 +61,6 @@ for i in range(3, len(arr)):
 if numberOfVK(sortArr(arr), k):
     total += 1
 
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge34/result.txt", "w")
 f.write(str(total))
 f.close()

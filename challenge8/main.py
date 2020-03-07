@@ -41,7 +41,7 @@ y = int(var[0])%8
 file.close()
 
 result = knightTour(N, x, y)
-file = open('result.txt', 'w')
+file = open('team15_ttwins/challenge8/result.txt', 'w')
 for line in result:
     l = ""
     for n in line:

@@ -47,7 +47,7 @@ for word in words:
 result = result[:-2]
 result += '}'
 
-f = open('result.txt', 'w', encoding='utf8')
+f = open('team15_ttwins/challenge25/result.txt', 'w', encoding='utf8')
 f.write(result)
 f.write('\n')
 with open(sys.argv[1], 'r', encoding='utf8') as fp: 
