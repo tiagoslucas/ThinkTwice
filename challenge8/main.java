@@ -83,8 +83,12 @@ class main {
         FileWriter myWriter = new FileWriter("result.txt");
         for (int i = 0; i < N; ++i) {
             String line = "";
-            for (int j = 0; j < N; ++j)
+            for (int j = 0; j < N; ++j) {
+                if (a[j * N + i] < 10) {
+                    line += "0";
+                }
                 line += a[j * N + i] + " ";
+            }
             myWriter.write(line);
             myWriter.write("\n");
         }
