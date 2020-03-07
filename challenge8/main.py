@@ -1,43 +1,50 @@
-from heapq import heappush, heappop
 import sys
-import string
-cb = [[0 for x in range(8)] for y in range(8)]
-dx = [-2, -1, 1, 2, -2, -1, 1, 2]
-dy = [1, 2, 2, 1, -1, -2, -2, -1]
 
-def main(filename):
-    board = [["{0:0=2d}".format(x+y*8) for x in range(8)] for y in range(8)]
-    visit = [[0 for x in range(8)] for y in range(8)]
-    initial = -1
+def knightTour(N, initX, initY):
+    def isSafe(x, y):
+        if 0 <= x < N and 0 <= y < N and board[x][y] == -1:
+            return True
+        return False
 
-    with open(filename,'r') as file:
-        for i in file:
-            initial = i
+    def backtrack(cur_x, cur_y, moveCount):
+        if moveCount >= N*N:
+            return True
 
-    with open('result.txt', 'w') as file:
-        for k in range(64):
-            cb[ky][kx] = k + 1
-            pq = []
-            for i in range(8):
-                nx = kx + dx[i]; ny = ky + dy[i]
-                if nx >= 0 and nx < 8 and ny >= 0 and ny < 8:
-                    if cb[ny][nx] == 0:
-                        ctr = 0
-                        for j in range(8):
-                            ex = nx + dx[j]; ey = ny + dy[j]
-                            if ex >= 0 and ex < 8 and ey >= 0 and ey < 8:
-                                if cb[ey][ex] == 0: ctr += 1
-                        heappush(pq, (ctr, i))
-            if len(pq) > 0:
-                (p, m) = heappop(pq)
-                kx += dx[m]; ky += dy[m]
-            else:
-                break
+        for i in range(8):
+            next_x = cur_x + move_x[i]
+            next_y = cur_y + move_y[i]
 
-        for cy in range(8):
-            for cx in range(8):
-                file.write(str(cb[cy][cx]) + '\n', 2)
-            file.write('\n')
+            if isSafe(next_x, next_y):
+                board[next_x][next_y] = moveCount
 
-if __name__ == '__main__' and len(sys.argv) > 1:
-    main(sys.argv[1])
+                if backtrack(next_x, next_y, moveCount+1):
+                    return True
+
+                board[next_x][next_y] = -1
+
+        return False
+
+    board = [[-1 for i in range(N)] for j in range(N)]
+
+    move_x = [2, 1, -1, -2, -2, -1, 1, 2]
+    move_y = [1, 2, 2, 1, -1, -2, -2, -1]
+
+    board[initX][initY] = 0
+    backtrack(0, 0, 1)
+    return board
+
+file = open(sys.argv[1], 'r')
+var = file.read().split()
+N = 8
+x = int(var[0])//8
+y = int(var[0])%8
+file.close()
+
+result = knightTour(N, x, y)
+file = open('result.txt', 'w')
+for line in result:
+    l = ""
+    for n in line:
+        l += "%02d " % (n,)
+    file.write(l[:-1] + '\n')
+file.close()
