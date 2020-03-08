@@ -48,7 +48,7 @@ for perm in list:
 
 prob = 1-(notFav/len(list))
 
-f = open('result.txt', 'w')
+f = open('team15_ttwins/challenge35/result.txt', 'w')
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
 elif prob < 0.5:
