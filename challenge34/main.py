@@ -1,4 +1,4 @@
-from itertools import combinations
+from itertools import combinations, permutations
 import sys
 
 with open(sys.argv[1], "r") as f:
@@ -41,7 +41,7 @@ total = 0
 c = 1
 for i in range(3, len(arr)):
     inserted = []
-    for perm in list(combinations(range(0, len(arr)), i)):
+    for perm in list(permutations(range(0, len(arr)), i)):
         temp = []
         for index in list(perm):
             temp.append(arr[index])
@@ -58,6 +58,6 @@ for i in range(3, len(arr)):
 if numberOfVK(sortArr(arr), k):
     total += 1
 
-f = open("result.txt", "w")
+f = open("team15_ttwins/challenge35/result.txt", "w")
 f.write(str(total))
 f.close()
