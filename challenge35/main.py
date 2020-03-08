@@ -14,7 +14,7 @@ for instruction in instructions:
     if instruction == 'L':
         dictInstruction[index] = 'ans'
     elif instruction == 'o':
-        dictInstruction[index] == 0
+        dictInstruction[index] = 0
     else:
         dictInstruction[index] = int(instruction)
     index += 1
@@ -48,7 +48,7 @@ for perm in list:
 
 prob = 1-(notFav/len(list))
 
-f = open('team15_ttwins/challenge35/result.txt', 'w')
+f = open('result.txt', 'w')
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
 elif prob < 0.5:
