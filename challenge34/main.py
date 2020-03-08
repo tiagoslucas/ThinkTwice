@@ -55,9 +55,9 @@ for i in range(3, len(arr)):
                 total += 1
                 inserted.append(temp_1)
 
-# if numberOfVK(sortArr(arr), k):
-#     total += 1
+if numberOfVK(sortArr(arr), k):
+    total += 1
 
-f = open("team15_ttwins/challenge34/result.txt", "w")
+f = open("result.txt", "w")
 f.write(str(total))
 f.close()
