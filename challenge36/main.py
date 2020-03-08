@@ -31,10 +31,10 @@ with open(sys.argv[1], 'r', encoding='utf8') as f:
 
     if(graphExists(d)):
         f = open("team15_ttwins/challenge36/result.txt", "w")
-        f.write('yes')
+        f.write('YES')
         f.close()
 
     else:
         f = open("team15_ttwins/challenge36/result.txt", "w")
-        f.write('no')
+        f.write('NO')
         f.close()
