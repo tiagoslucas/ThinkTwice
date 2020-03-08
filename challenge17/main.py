@@ -1,15 +1,21 @@
 import sys
+
+
 def output(a):
-    fName = 'team15_ttwins/challenge35/result.txt'
+    fName = 'team15_ttwins/challenge17/result.txt'
     with open(fName, "w") as f:
         if len(a) > 7:
             f.write('ERROR')
         else:
             f.write(str(a))
+
+
 def readFile(path):
     with open(path) as fp:
-        n,b1,b2 = fp.readline().strip("\n").split(" ")
-        return n,int(b1),int(b2)
+        n, b1, b2 = fp.readline().strip("\n").split(" ")
+        return n, int(b1), int(b2)
+
+
 SY2VA = {'0': 0,
          '1': 1,
          '2': 2,
@@ -26,7 +32,9 @@ SY2VA = {'0': 0,
          'D': 13,
          'E': 14,
          'F': 15
-}
+         }
+
+
 def str2int(string, base):
     integer = 0
     for character in string:
@@ -35,7 +43,9 @@ def str2int(string, base):
         integer += value
     return integer
 
+
 VA2SY = dict(map(reversed, SY2VA.items()))
+
 
 def int2str(integer, base):
     array = []
@@ -44,7 +54,8 @@ def int2str(integer, base):
         array.append(VA2SY[value])
     return ''.join(reversed(array))
 
-def go(innitvar,basevar,convertvar):
+
+def go(innitvar, basevar, convertvar):
     integer = 0
     for character in innitvar:
         value = SY2VA[character]
@@ -57,8 +68,12 @@ def go(innitvar,basevar,convertvar):
         array.append(VA2SY[value])
     answer = ''.join(reversed(array))
     return answer
+
+
 def main(path):
-    n,b1,b2 = readFile(path)
-    a = go(n,b1,b2)
+    n, b1, b2 = readFile(path)
+    a = go(n, b1, b2)
     output(a)
+
+
 main(sys.argv[1])
