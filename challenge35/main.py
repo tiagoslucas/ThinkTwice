@@ -39,16 +39,16 @@ for perm in list:
             if (dictInstruction[perm[index]] != 'ans'):
                 house = house + perm[index] + dictInstruction[perm[index]]
             if(house >= int(m)+1):
-                break
+                exit
             index += 1
             if(index == int(t)):
-                break
+                exit
     if house < (int(m) + 1):
         notFav += 1
 
 prob = 1-(notFav/len(list))
 
-f = open('team15_ttwins/challenge35/result.txt', 'w')
+f = open('result.txt', 'w')
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
 elif prob < 0.5:
