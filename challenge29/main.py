@@ -21,7 +21,7 @@ def lucas(n) :
 with open(sys.argv[1], 'r') as input:
     n = input.read()
 
-f = open('result.txt', 'w', encoding='utf8')
-# f = open('team15_ttwins/challenge29/result.txt', 'w', encoding='utf8')
+# f = open('result.txt', 'w', encoding='utf8')
+f = open('team15_ttwins/challenge29/result.txt', 'w', encoding='utf8')
 f.write(str(lucas(int(n))))
 f.close()
