@@ -19,28 +19,28 @@ for instruction in instructions:
         dictInstruction[index] = int(instruction)
     index += 1
 
-print(dictInstruction)
 list = []
-
-for comb in (combinations_with_replacement(range(1,3),4)):
-    for perm in permutations(comb):
-        list.append(perm)
-
-list = set(list)
+if int(t) == 1:
+    list = {(1), (2)}
+else:
+    for comb in (combinations_with_replacement(range(1,3),int(t))):
+            for perm in permutations(comb):
+                list.append(perm)
+    list = set(list)
 turn = 0
 notFav = 0
 for perm in list:
     house = 0
     index = 0
-    print(perm)
-    for i in perm:
-        print(house)
-        print(perm[index], dictInstruction[perm[index]])
-        if (dictInstruction[perm[index]] != 'ans'):
-            house = house + perm[index] + dictInstruction[perm[index]]
-        index += 1
-        if(index == int(t)):
-            break
+    if int(t) == 1:
+        house = house + perm
+    else:
+        for i in perm:
+            if (dictInstruction[perm[index]] != 'ans'):
+                house = house + perm[index] + dictInstruction[perm[index]]
+            index += 1
+            if(index == int(t)):
+                break
     if house < (int(m) + 1):
         notFav += 1
 
