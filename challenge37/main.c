@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
 
 	for (int i = 0; i < n; i++) {
 		for (int j = i - 1; j > 0; j--) {
-			if ( vetori[i] <= vetori[j] || ((vetori[i] - vetori[j]) + (vetori[j] - vetori[0])) != (vetori[i] - vetori[0]) ) {
+			if ((( vetori[i] - vetori[j] ) + (vetori[j] - vetori[0])) != (vetori[i] - vetori[0]) ) {
 				result = 2;
 				break;
 			}

@@ -1,6 +1,7 @@
 import sys
 f = open(sys.argv[1], "r")
 text = f.read()
+f.close()
 output = ""
 
 count = 0

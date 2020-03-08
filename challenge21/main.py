@@ -1,51 +1,78 @@
 import sys
+import math
 import re
-import json
+def output(palavras):
+    a=sorted(palavras.keys())
+    fName = 'team15_ttwins/challenge20/result.txt'
+    with open(fName, "w") as f:
+        for i in a:
 
-dic = {}
-word_ant = ""
-with open(sys.argv[1], 'r', encoding='utf8') as fp: 
-    line = fp.readline()
-    while line:
-        process_line = re.split(' |-',line[:-1])
-        for word in process_line:
-            wordsa = re.sub(',', ' ', word)
-            wordsa = wordsa.split(" ")
-            if (len(wordsa)>1):
-                word = wordsa[0]
-                process_line.append(wordsa[1])
-            else:
-                word = wordsa[0]
+            b = sorted(palavras[i].keys())
+            f.write(i+"={")
+            p=1
+            for j in b:
+                f.write(j+"="+str(palavras[i][j]))
+                if len(palavras[i]) > 1 or p<=len(palavras[i])-1:
+                    if len(palavras[i]) == p:
+                        f.write("}"+'\n')
+                    else:
+                        f.write(", ")
+                elif len(palavras[i]) == p:
+                    f.write("}"+'\n')
+                p+=1
+
+
+
+def readFile(path):
+    with open(path,"r",encoding='utf-8') as fp:
+        lines = fp.readlines()
+        return lines
+
+
+def numFog(linhas):
+    texto=[]
+    for line in linhas:
+        linha,nada=line.split('\n')
+        if linha=='' and nada=='':
+            continue    
+        linha=(re.sub(r"[\W_]+", ' ',linha))
+        texto.append(linha)
+    texto=' '.join(texto)
+    texto=texto.split(' ')
+    texto=[i for i in texto if i != '']
+    return texto
+
+def dicionario(texto):
+    palavras={}
+    count={}
+    for i in range(len(texto)-1):
+        palavra1=texto[i].lower()
+        palavra2=texto[i+1].lower()
+        if len(palavra1)<3:
+            # if not palavra1 in palavras:
+            continue
+        if len(palavra1)>=3 and len(palavra2)<3:
+            p=len(palavra2)
+            c = 2
+            while p <3:
+                palavra2=texto[i+c].lower()
+                p = len(palavra2)
+                c +=1
+        if not palavra1 in palavras:
+            palavras[palavra1] = {}
+        if not palavra2 in palavras[palavra1]:
+            palavras[palavra1][palavra2] = 1
+        else:
+            palavras[palavra1][palavra2] += 1
+
+    return palavras
+    
+    
             
-            wordsa2 = word.split("’")
-            if (len(wordsa2)>1):
-                word = wordsa2[0]
-                process_line.append(wordsa2[1])
-            else:
-                word = wordsa2[0]
+def main(path):
+    linhas = readFile(path)
+    texto = numFog(linhas)
+    a=dicionario(texto)
+    output(a)
 
-            word = re.sub(r'[^\w\s]', '', word)
-            word_act = word.lower()
-            if word_ant == "":
-                word_ant = word_act
-            elif len(word_act) >= 3:
-                if word_ant not in dic.keys():
-                    dic[word_ant] = {word_act:1}
-                elif word_act not in dic[word_ant].keys():
-                    dic[word_ant][word_act] = 1
-                else:
-                    dic[word_ant][word_act] += 1
-                word_ant = word_act
-        line = fp.readline()
-
-f = open('team15_ttwins/challenge21/result.txt', 'w', encoding='utf8')
-new_dic = {}
-for key in sorted(dic.keys()) :
-    new_dic[key] = dic[key]
-dic = new_dic
-for d in dic:
-    f.write(d + '={')
-    strW = ''
-    for w in dic[d]:
-        strW = strW + w + '=' + str(dic[d][w]) + ', '
-    f.write(strW[:-2]+'}\n')
+main(sys.argv[1])
