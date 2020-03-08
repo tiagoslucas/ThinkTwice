@@ -15,6 +15,10 @@ for instruction in instructions:
         dictInstruction[index] = 'ans'
     elif instruction == 'o':
         dictInstruction[index] = 0
+    elif instruction.find('+') != -1:
+        print(instruction)
+        dictInstruction[index]  = int(instruction.replace('+',''))
+        print(dictInstruction[index])
     else:
         dictInstruction[index] = int(instruction)
     index += 1
@@ -48,7 +52,8 @@ for perm in list:
 
 prob = 1-(notFav/len(list))
 
-f = open('team15_ttwins/challenge35/result.txt', 'w')
+f = open('result.txt', 'w')
+# f = open('team15_ttwins/challenge35/result.txt', 'w')
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
 elif prob < 0.5:
