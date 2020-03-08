@@ -50,7 +50,7 @@ def printFibRepresntation(n, seq):
 
 # Esta a usar a n-sequencia
 if n in seq[2:]:
-    f = open("team15_ttwins/challenge38/result.txt", "w")
+    f = open("result.txt", "w")
     f.write("lose")
     f.close()
 else:
@@ -58,27 +58,28 @@ else:
     if k == 1:
         if n % 2 != 0:
             var = 1
-    elif k == 2:
+        f = open("team15_ttwins/challenge38/result.txt", "w")
+        f.write(str(var))
+        f.close()
+    else:
         i = printFibRepresntation(n, seq)
         f = open("team15_ttwins/challenge38/result.txt", "w")
         f.write(str(min(i)))
         f.close()
-    else:
-        for i in range(1, n):
-            if n - i in seq[2:]:
-                if i * k >= n - i:
-                    isValid = False
-                    for l in list(reversed(range(1, i))):
-                        if l * k < n - l:
-                            var = l
-                            isValid = True
-                            break
-                    if isValid:
-                        break
-                else:
-                    var = i
-                    break
+    # else:
+    #     for i in range(1, n):
+    #         if n - i in seq[2:]:
+    #             if i * k >= n - i:
+    #                 isValid = False
+    #                 for l in list(reversed(range(1, i))):
+    #                     if l * k < n - l:
+    #                         var = l
+    #                         isValid = True
+    #                         break
+    #                 if isValid:
+    #                     break
+    #             else:
+    #                 var = i
+    #                 break
 
-    f = open("team15_ttwins/challenge38/result.txt", "w")
-    f.write(str(var))
-    f.close()
+    #
