@@ -1,7 +1,6 @@
 import sys
 import itertools
 
-
 def get_value(word, substitution):
     s = 0
     factor = 1
@@ -9,7 +8,6 @@ def get_value(word, substitution):
         s += factor * substitution[letter]
         factor *= 10
     return s
-
 
 def solve2(equation,arr):
     left, right = equation.lower().replace(' ', '').split('=')
@@ -37,7 +35,6 @@ def readFile(path):
         lines = fp.readlines()
         return lines
             
-
 def main(path):
     lines = readFile(path)
     palavras=[]
