@@ -120,7 +120,7 @@ class main
  
         if(min_dist != Integer.MAX_VALUE) {
             try {
-                FileWriter myWriter = new FileWriter("team15_ttwins/challenge20/result.txt");
+                FileWriter myWriter = new FileWriter("result.txt");
                 myWriter.write("Caminho mais curto: " + Integer.toString(min_dist + 2));
                 myWriter.close();
             } catch (IOException e) {
@@ -129,7 +129,7 @@ class main
         }
         else {
             try {
-                FileWriter myWriter = new FileWriter("team15_ttwins/challenge20/result.txt");
+                FileWriter myWriter = new FileWriter("result.txt");
                 myWriter.write("Impossible");
                 myWriter.close();
             } catch (IOException e) {

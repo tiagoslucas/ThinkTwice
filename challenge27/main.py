@@ -8,7 +8,7 @@ for i in range(10 ** 5):
 		if i%num == 0:
 			list.append(num)
 	if len(list) == n:
-		file = open('result.txt','w')
+		file = open('team15_ttwins/challenge25/result.txt','w')
 		file.write(str(num))
 		file.close()
 		break
