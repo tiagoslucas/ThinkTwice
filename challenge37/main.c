@@ -18,18 +18,18 @@ int main(int argc, char** argv) {
 	}
 	fclose(input);
 
-	for (int i = 0; i < n; i++) {
-		for (int j = i - 1; j > 0; j--) {
-			if ((( vetori[i] - vetori[j] ) + (vetori[j] - vetori[0])) != (vetori[i] - vetori[0]) ) {
-				result = 2;
-				break;
-			}
-		}
+	for (int i = 0; i < lim; i++) {
 		if (result == 0) {
 			if (i < 1)
 				vetorf[i] = 0;
 			else
-				vetorf[i] = vetori[i] - vetorf[0];
+				vetorf[i] = vetorf[i-1] + vetori[i-1] - vetorf[i-1];
+		}
+		for (int j = 0; j < i; j++) {
+			if (((vetorf[i] - vetorf[j]) + (vetorf[j] - vetorf[0])) != vetorf[i] - vetorf[0]) {
+				result = 1;
+				break;
+			}
 		}
 	}
 	
