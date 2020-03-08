@@ -10,7 +10,9 @@ with open(sys.argv[1], 'r', encoding="utf8") as f:
             n = (int)(i.split(" ")[0])
         else:
             temp = i.split(" ")
-            cords = list(zip(temp[::2], temp[1::2]))
+            for i in range(0, len(temp)):
+                temp[i] = (float)(temp[i])
+            cords = list(zip((temp[::2]), (temp[1::2])))
         count += 1
     centroids = {
         i+1: [cords[i][0], cords[i][1]]
@@ -18,9 +20,10 @@ with open(sys.argv[1], 'r', encoding="utf8") as f:
     }
 
     def distanceBetween(a, b):
-        return math.sqrt(((int)(a[0]) - (int)(b[0])) ** 2 + ((int)(a[1]) - (int)(b[1])) ** 2)
+        return math.sqrt((a[0] - b[0])*(a[0] - b[0]) + (a[1] - b[1])*(a[1] - b[1]))
+
     iteractions = 0
-    while iteractions < 1000:
+    while iteractions < 100000:
         clusters = {}
         for i in range(k):
             clusters[i] = []
@@ -44,8 +47,8 @@ with open(sys.argv[1], 'r', encoding="utf8") as f:
             x = 0
             y = 0
             for point in clusters[centroid-1]:
-                x += (int)(point[0])
-                y += (int)(point[1])
+                x += (point[0])
+                y += (point[1])
             x = x / len(clusters[centroid - 1])
             y = y / len(clusters[centroid - 1])
             centroids[centroid] = [x, y]
@@ -58,12 +61,14 @@ with open(sys.argv[1], 'r', encoding="utf8") as f:
         x = 0
         y = 0
         for point in clusters[cluster]:
-            x += (int)(point[0])
-            y += (int)(point[1])
+            x += (point[0])
+            y += (point[1])
         x /= len(clusters[cluster])
         y /= len(clusters[cluster])
         arr.append(distanceBetween(clusters[cluster][0], [x, y]))
 
+    print(clusters)
+    print(arr)
     f = open("team15_ttwins/challenge33/result.txt", "w")
     f.write(f"{max(arr):.2f}")
     f.close()
