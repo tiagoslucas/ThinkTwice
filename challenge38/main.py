@@ -58,6 +58,11 @@ else:
     if k == 1:
         if n % 2 != 0:
             var = 1
+    elif k == 2:
+        i = printFibRepresntation(n, seq)
+        f = open("team15_ttwins/challenge38/result.txt", "w")
+        f.write(str(min(i)))
+        f.close()
     else:
         for i in range(1, n):
             if n - i in seq[2:]:
