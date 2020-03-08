@@ -1,30 +1,58 @@
 import sys
 
-def collatz(n):
-    seq = []
-    while n > 1:
-        seq.append(n)
-        # print(n, end=' ')
-        if (n % 2):
-            # n is odd
-            n = 3*n + 1
-        else:
-            # n is even
-            n = n//2
-    return seq
- 
-seqOfSeqs = {}
-seqOfSeqs2 = {}
+def collatzLenUtil(n, collLenMap): 
+      
+    # If value already  
+    # computed, return it 
+    if n in collLenMap: 
+        return collLenMap[n] 
+      
+    # Base case 
+    if(n == 1): 
+        collLenMap[n] = 1
+  
+    # Even case 
+    elif(n % 2 == 0): 
+        collLenMap[n] = 1 + collatzLenUtil(n//2, collLenMap) 
+  
+    # Odd case 
+    else: 
+        collLenMap[n] = 1 + collatzLenUtil(3 * n + 1, collLenMap) 
+      
+    return collLenMap[n] 
+  
+def collatzLen(n): 
+      
+    # Declare empty Map / Dict 
+    # to store collatz lengths 
+    collLenMap = {} 
+      
+    collatzLenUtil(n, collLenMap) 
+  
+    # Initalise ans and  
+    # its collatz length 
+    num, l =-1, 0
+      
+    for i in range(1, n): 
+          
+        # If value not already computed, 
+        # pass Dict to Helper function 
+        # and calculate and store value 
+        if i not in collLenMap: 
+            collatzLenUtil(i, collLenMap) 
+          
+        cLen = collLenMap[i] 
+        if l < cLen: 
+            l = cLen 
+            num = i 
+      
+    # Return ans and  
+    # its collatz length 
+    return (num, l-1) 
 
 with open(sys.argv[1], 'r') as input:
     n = input.read()
 
-for i in range(int(n)):
-    seqFinal = collatz(i)
-    seqOfSeqs[i] = len(seqFinal)
-    seqOfSeqs2[i] = seqFinal
-max1 = max(seqOfSeqs, key=seqOfSeqs.get)
-
 f = open('team15_ttwins/challenge28/result.txt', 'w')
-f.write(str(max1) + " " + str(len(seqOfSeqs2[max1])))
+f.write(str(collatzLen(int(n)))[1:-1].replace(',',''))
 f.close()
