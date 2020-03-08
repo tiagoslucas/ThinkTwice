@@ -16,9 +16,9 @@ for instruction in instructions:
     elif instruction == 'o':
         dictInstruction[index] = 0
     elif instruction.find('+') != -1:
-        print(instruction)
+        # print(instruction)
         dictInstruction[index]  = int(instruction.replace('+',''))
-        print(dictInstruction[index])
+        # print(dictInstruction[index])
     else:
         dictInstruction[index] = int(instruction)
     index += 1
@@ -36,24 +36,31 @@ notFav = 0
 for perm in list:
     house = 0
     index = 0
+    print(house)
     if int(t) == 1:
         house = house + perm
     else:
         for i in perm:
+            print(dictInstruction[perm[index]], house, int(m)+1)
             if (dictInstruction[perm[index]] != 'ans'):
-                house = house + perm[index] + dictInstruction[perm[index]]
+                house = house + perm[index] # dictInstruction[perm[index]]
+                # house = house + perm[index] + dictInstruction[perm[index]]
+            print(dictInstruction[perm[index]], house, int(m)+1)
             if(house >= int(m)+1):
                 exit
             index += 1
             if(index == int(t)):
                 exit
+    print(house)
     if house < (int(m) + 1):
         notFav += 1
+    else:
+        print('CHEGOU')
 
 prob = 1-(notFav/len(list))
 
-f = open('result.txt', 'w')
-# f = open('team15_ttwins/challenge35/result.txt', 'w')
+# f = open('result.txt', 'w')
+f = open('team15_ttwins/challenge35/result.txt', 'w')
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
 elif prob < 0.5:
