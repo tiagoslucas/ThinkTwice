@@ -38,6 +38,8 @@ for perm in list:
         for i in perm:
             if (dictInstruction[perm[index]] != 'ans'):
                 house = house + perm[index] + dictInstruction[perm[index]]
+            if(house >= int(m)+1):
+                break
             index += 1
             if(index == int(t)):
                 break
