@@ -3,7 +3,7 @@ import math
 import re
 def output(palavras):
     a=sorted(palavras.keys())
-    fName = 'team15_ttwins/challenge20/result.txt'
+    fName = 'team15_ttwins/challenge21/result.txt'
     with open(fName, "w") as f:
         for i in a:
 
@@ -21,13 +21,10 @@ def output(palavras):
                     f.write("}"+'\n')
                 p+=1
 
-
-
 def readFile(path):
-    with open(path,"r",encoding='utf-8') as fp:
+    with open(path,"r") as fp:
         lines = fp.readlines()
         return lines
-
 
 def numFog(linhas):
     texto=[]
@@ -49,7 +46,6 @@ def dicionario(texto):
         palavra1=texto[i].lower()
         palavra2=texto[i+1].lower()
         if len(palavra1)<3:
-            # if not palavra1 in palavras:
             continue
         if len(palavra1)>=3 and len(palavra2)<3:
             p=len(palavra2)
@@ -64,11 +60,8 @@ def dicionario(texto):
             palavras[palavra1][palavra2] = 1
         else:
             palavras[palavra1][palavra2] += 1
-
     return palavras
-    
-    
-            
+
 def main(path):
     linhas = readFile(path)
     texto = numFog(linhas)
