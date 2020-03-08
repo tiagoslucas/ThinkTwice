@@ -35,7 +35,7 @@ def create_combinations(firstList, secondList):
 		if i not in dictFromList(secondList).keys():
 			return 1
 
-	for comb in combinations_with_replacement(range(1,10), len(firstList) + len(secondList)):
+	for comb in combinations_with_replacement(range(1,10), (len(firstList) + len(secondList))):
 		for perm in permutations(comb):
 			fList = []
 			sList = []
@@ -57,7 +57,7 @@ def create_combinations(firstList, secondList):
 				return 0
 	return 1
 
-with open(sys.argv[1], 'r', encoding='utf8') as input:
+with open(sys.argv[1], 'r') as input:
 	eq = input.readline();
 	arg1, arg2 = eq.split('=')
 	list1 = arg1.split('+')
@@ -67,14 +67,6 @@ if create_combinations(list1, list2) == 1:
 	with open('team15_ttwins/challenge39/result.txt', 'w') as output:
 		output.write('IMPOSSIBLE')
 else:
-	div = 1
-	if result:
-		div = reduce(gcd, result)
-	for i in range(len(result)):
-		if i < len(list1):
-			list1[i] = f"{int(result[i]/div)}{list2[i]}"
-		else:
-			list2[i - len(list1)] = f"{int(result[i]/div)}{list2[i - len(list1)]}"
+	div = reduce(gcd, result)
 	with open('team15_ttwins/challenge39/result.txt', 'w') as output:
-		#output.write('+'.join(list1) + '=' + '+'.join(list2))
-		output.writelines(f"{int(i/div)}" for i in result)
+		output.writelines(f"{int(i/div)} " for i in result)
