@@ -1,7 +1,7 @@
 from itertools import combinations_with_replacement, permutations
 import sys
 
-with open(sys.argv[1], 'r', encoding='utf8') as input:
+with open(sys.argv[1], 'r', encoding='utf-8') as input:
     vars = input.readline().split(' ')
     m = vars[0]
     t = vars[1]
@@ -49,7 +49,7 @@ for perm in list:
 prob = 1-(notFav/len(list))
 
 # f = open('result.txt', 'w', encoding='utf8')
-f = open('team15_ttwins/challenge35/result.txt', 'w', encoding='utf8')
+f = open('team15_ttwins/challenge35/result.txt', 'w', encoding='utf-8')
 
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
