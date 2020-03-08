@@ -64,6 +64,6 @@ with open(sys.argv[1], 'r', encoding="utf8") as f:
         y /= len(clusters[cluster])
         arr.append(distanceBetween(clusters[cluster][0], [x, y]))
 
-    f = open("result.txt", "w")
+    f = open("team15_ttwins/challenge33/result.txt", "w")
     f.write(f"{max(arr):.2f}")
     f.close()
