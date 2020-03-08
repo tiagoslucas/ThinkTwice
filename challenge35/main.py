@@ -40,15 +40,12 @@ for perm in list:
     if int(t) == 1:
         house = house + perm
     else:
-        ant = 0
         for i in perm:
-            print(dictInstruction[perm[index]], perm[index], house, int(m)+1)
+            print(dictInstruction[perm[index]], house, int(m)+1)
             if (dictInstruction[perm[index]] != 'ans'):
-                house = house + dictInstruction[perm[index]] # dictInstruction[perm[index]]
+                house = house + perm[index] + dictInstruction[perm[index]]
                 # house = house + perm[index] + dictInstruction[perm[index]]
-            else:
-                house = ant 
-            ant = house
+            print(dictInstruction[perm[index]], house, int(m)+1)
             if(house >= int(m)+1):
                 exit
             index += 1
@@ -62,8 +59,8 @@ for perm in list:
 
 prob = 1-(notFav/len(list))
 
-f = open('result.txt', 'w')
-# f = open('team15_ttwins/challenge35/result.txt', 'w')
+# f = open('result.txt', 'w')
+f = open('team15_ttwins/challenge35/result.txt', 'w')
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
 elif prob < 0.5:
