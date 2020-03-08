@@ -11,11 +11,11 @@ def main():
 						if (i % j) == 0:
 							count += 1
 						if count == d:
-							file = open('result.txt', 'w')
+							file = open('team15_ttwins/challenge27/result.txt', 'w')
 							file.write(str(i))
 							file.close()
 							return 0
-			file = open('result.txt', 'w')
+			file = open('team15_ttwins/challenge27/result.txt', 'w')
 			file.write('Impossible')
 			file.close()
 
