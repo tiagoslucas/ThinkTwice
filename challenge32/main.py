@@ -1,42 +1,70 @@
-from itertools import combinations, permutations
 import sys
-list1 = []
+import itertools
 
-def replacements(key):
-    for comb in combinations(range(10), len(key)):
-        for perm in permutations(comb):
-            if perm[0] * perm[1] != 0:
-                temp = dict(zip(key, perm))
-                no0 = True
-                for h in list1:
-                    if temp[h] == 0:
-                        no0 = False
-                        continue
-                if no0:
-                    yield temp
 
-with open(sys.argv[1], 'r') as f:
-    numberOfWords = int(f.readline())
-    list2 = []
-    for i in range(numberOfWords):
-        list2.append(f.readline().strip())
-        if not list2[i][0] in list1:
-            list1.append(list2[i][0])
-    list3 = []
-    for i in list2:
-        for j in i:
-            list3.append(j)
-    list3 = set(list3)
-    key = "".join(list3)
+def get_value(word, substitution):
+    s = 0
+    factor = 1
+    for letter in reversed(word):
+        s += factor * substitution[letter]
+        factor *= 10
+    return s
 
-count = 0
-for replacement in replacements(key):
-    def f(x): return sum(replacement[e] * 10**i for i, e in enumerate(x[::-1]))
-    total = 0
-    for i in range(numberOfWords - 1):
-        total += f(list2[i])
-    if total == f(list2[-1]):
-        count += 1
 
-with open('team15_ttwins/challenge32/result.txt', 'w') as file:
-    file.write(str(count))
+def solve2(equation,arr):
+    left, right = equation.lower().replace(' ', '').split('=')
+    left = left.split('+')
+    letters = set(right)
+    for word in left:
+        for letter in word:
+            letters.add(letter)
+    letters = list(letters)
+
+    digits = range(10)
+    for perm in itertools.permutations(digits, len(letters)):
+        sol = dict(zip(letters, perm))
+        if sum(get_value(word, sol) for word in left) == get_value(right, sol):
+            a = [str(get_value(word, sol)) for word in left]
+            a.append(get_value(right, sol))
+            arr.append(a)
+    return arr     
+def output(counter):
+    fName = "team15_ttwins/challenge32/result.txt"
+    with open(fName, "w") as f:
+        f.write(str(counter)) 
+def readFile(path):
+    with open(path) as fp:
+        lines = fp.readlines()
+        return lines
+            
+
+def main(path):
+    lines = readFile(path)
+    palavras=[]
+    for line in lines:
+        linha=line.split('\n')
+        palavras.append(linha[0])
+    total=palavras[0]
+    eq = ""
+    for i in range(1,len(palavras)):
+        if i < int(total)-1:
+            eq += palavras[i] + " + "
+        elif i == int(total)-1:
+            eq += palavras[i] + " = "
+        else:
+            eq += palavras[i]
+    arr = []
+    
+    a = solve2(eq,arr)
+    f = 0
+    counter = 0
+    palavras = palavras[1:]
+    for i in range(len(a)):
+        for j in range(len(a[i])):
+            if not len(str(a[i][j])) == len(palavras[j]):
+                f = 1
+        if f == 0:
+            counter += 1
+        f = 0
+    output(counter)
+main(sys.argv[1])
