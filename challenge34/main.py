@@ -12,6 +12,7 @@ with open(sys.argv[1], "r") as f:
         else:
             arr.append([(int)(i.split(" ")[0]), (int)(i.split(" ")[1])])
 
+
 def sortArr(arr1):
     for iii in range(0, len(arr1)):
         for jjj in range(iii + 1, len(arr1)):
@@ -20,6 +21,7 @@ def sortArr(arr1):
                 arr1[iii] = arr1[jjj]
                 arr1[jjj] = temp_111
     return arr1
+
 
 def numberOfVK(arr2, k):
     count = 0
@@ -33,6 +35,7 @@ def numberOfVK(arr2, k):
     if count == k:
         return True
     return False
+
 
 total = 0
 c = 1
@@ -52,8 +55,8 @@ for i in range(3, len(arr)):
                 total += 1
                 inserted.append(temp_1)
 
-if numberOfVK(sortArr(arr), k):
-    total += 1
+# if numberOfVK(sortArr(arr), k):
+#     total += 1
 
 f = open("team15_ttwins/challenge34/result.txt", "w")
 f.write(str(total))
