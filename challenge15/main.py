@@ -13,10 +13,11 @@ while n < m:
         step = step + 1
     else:
         step = 1
+    print(step, n)
     if step + 1 < n:
         step += 1
     count += 1
 
 f = open("team15_ttwins/challenge15/result.txt", "w")
-f.write(count)
+f.write(str(count))
 f.close()
