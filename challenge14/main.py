@@ -27,6 +27,7 @@ for l in colors:
 
 isValid = True
 for color in colors:
+    isValid=True
     if colors[color] == -1:
         isValid = False
         break
