@@ -32,9 +32,12 @@ notFav = 0
 for perm in list:
     house = 0
     index = 0
+    print(perm)
     for i in perm:
-        if (dictInstruction[index] != 'ans'):
-            house = house + perm[index] + dictInstruction[index]
+        print(house)
+        print(perm[index], dictInstruction[perm[index]])
+        if (dictInstruction[perm[index]] != 'ans'):
+            house = house + perm[index] + dictInstruction[perm[index]]
         index += 1
         if(index == int(t)):
             break
@@ -43,7 +46,8 @@ for perm in list:
 
 prob = 1-(notFav/len(list))
 
-f = open('team15_ttwins/challenge35/result.txt', 'w', encoding='utf8')
+f = open('result.txt', 'w', encoding='utf8')
+# f = open('team15_ttwins/challenge35/result.txt', 'w', encoding='utf8')
 
 if prob > 0.5:
     f.write(f"Bet for. {prob:.4f}")
