@@ -1,3 +1,4 @@
+import sys
 # Iterative function 
 def lucas(n) : 
   
@@ -20,6 +21,7 @@ def lucas(n) :
 with open(sys.argv[1], 'r') as input:
     n = input.read()
 
-f = open('team15_ttwins/challenge29/result.txt', 'w', encoding='utf8')
-f.write(lucas(n))
+f = open('result.txt', 'w', encoding='utf8')
+# f = open('team15_ttwins/challenge29/result.txt', 'w', encoding='utf8')
+f.write(str(lucas(int(n))))
 f.close()
