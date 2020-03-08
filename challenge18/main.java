@@ -84,7 +84,7 @@ class main {
      * displays the chessboard with all the legal knight's moves
      */
     void print(int a[]) throws Exception {
-        FileWriter myWriter = new FileWriter("result.txt");
+        FileWriter myWriter = new FileWriter("team15_ttwins/challenge18/result.txt");
         System.out.println(N);
         for (int i = 0; i < N; ++i) {
             String line = "";
