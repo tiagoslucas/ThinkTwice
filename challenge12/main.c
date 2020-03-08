@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
 		}
 	}
 
-	output = fopen("result.txt", "w");
+	output = fopen("team15_ttwins/challenge12/result.txt", "w");
 	fprintf(output, "%d", zeros);
 	fclose(output);
 

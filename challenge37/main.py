@@ -15,6 +15,6 @@ with open(sys.argv[1], 'r') as file:
 	for i in file.readline().split(' '):
 		vals.append(i)
 	assignResult(n)
-	file = open('result.txt', 'w')
+	file = open('team15_ttwins/challenge37/result.txt', 'w')
 	file.writelines(res for res in result)
 	file.close()
